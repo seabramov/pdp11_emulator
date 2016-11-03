@@ -8,7 +8,6 @@ list (APPEND DIR_LIST
 		emulation
 )
 
-
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 foreach (DIR ${DIR_LIST})

@@ -75,5 +75,9 @@ typedef struct instr_desc
 		dst = op & 0x0007;	\
 	} while(0)
 
+#define GET_OFFSET(op, offset)	\
+	do {	\
+		offset = op & 0x00ff;	\
+	} while (0)
 
 #endif // DECODE_H

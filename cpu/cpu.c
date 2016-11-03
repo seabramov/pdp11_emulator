@@ -15,7 +15,7 @@
 uint8_t exec_array[] = 
 {
 	0b01000000, 0b00011100, 0b00001010, 0b00000000,
-	0b10000000, 0b10001100, 0b01111111, 0b01111111, 
+	0b10000000, 0b10001100, 0b00000001, 0b00000001, 
 	0b01111111, 0b01111111, 0b10010001, 0b10000000,
 	0b01111111, 0b01111111, 0b01111111, 0b01111111,
 	0b01111111, 0b01111111, 0b01111111, 0b01111111, 
@@ -157,7 +157,7 @@ exec_status_t cpu_exec(vcpu_t* vcpu)
 {
 	instr_t op = fetch_instr(vcpu);
 
-	const instr_desc_t* instr = lookup_table(op);
+	instr_desc_t* instr = lookup_table(op);
 
 	if (instr == NULL)
 		return EXEC_UNDEFINED;		

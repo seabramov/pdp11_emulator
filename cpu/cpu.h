@@ -15,6 +15,21 @@
 		bit_c = (*(vcpu->psw)).c;	\
 	} while (0)
 
+#define GET_Z(vcpu, bit_z)	\
+	do {	\
+		bit_z = (*(vcpu->psw)).z;	\
+	} while (0)
+
+#define GET_N(vcpu, bit_n)	\
+	do {	\
+		bit_n = (*(vcpu->psw)).n;	\
+	} while (0)
+
+#define GET_V(vcpu, bit_v)	\
+	do {	\
+		bit_v = (*(vcpu->psw)).v;	\
+	} while (0)
+
 #define LOAD_N(vcpu, flag)	\
 	do {	\
 		(*(vcpu->psw)).n = flag;	\
@@ -85,16 +100,28 @@
 		(*(vcpu->psw)).reg_val &= 0xf7ff;	\
 	} while (0)
 
-
 #define PS_INIT(vcpu) \
 	do {	\
 		(*(vcpu->psw)).reg_val &= PS_INIT_MASK;	\
 	} while (0)
 
+#define SET_PC(vcpu, value)	\
+	do {	\
+		vcpu->regs[PC] = value;	\
+	} while (0)
+
+#define GET_PC(vcpu, pc)	\
+	do {	\
+		pc = vcpu->regs[PC];	\
+	} while (0)
+
+
 
 typedef uint16_t reg16_t;
 typedef uint16_t pdp_reg;
 typedef uint16_t instr_t;
+typedef int16_t  word;
+typedef int8_t byte;
 
 
 typedef enum reg_id

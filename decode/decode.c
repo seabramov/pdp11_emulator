@@ -14,9 +14,9 @@ int table_cmp(uint16_t mask, uint16_t value, uint16_t op)
 	return 0;
 }
 
-const instr_desc_t* lookup_table(uint16_t op)
+instr_desc_t* lookup_table(uint16_t op)
 {
-	const instr_desc_t* instr_desc = instr_table;
+	instr_desc_t* instr_desc = instr_table;
 
 	do {
 		

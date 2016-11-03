@@ -29,9 +29,29 @@ instr_desc_t instr_table[] =
 	{0x7FC0, 0x0CC0, "asl", asl_emu},
 	{0x7FC0, 0x0C00, "ror", ror_emu},
 	{0x7FC0, 0x0C40, "rol", rol_emu},
+	{0x7FC0, 0x00C0, "swab", swab_emu},
+	{0xff00, 0x0100, "br", br_emu},
+	{0xff00, 0x0200, "bne", bne_emu},
+	{0xff00, 0x0300, "beq", beq_emu},
+	{0xff00, 0x8000, "bpl", bpl_emu},
+	{0xff00, 0x8100, "bmi", bmi_emu},
+	{0xff00, 0x8400, "bvc", bvc_emu},
+	{0xff00, 0x8500, "bvs", bvs_emu},
+	{0xff00, 0x8600, "bcc", bcc_emu},
+	{0xff00, 0x8700, "bcs", bcs_emu},
+	{0xff00, 0x0400, "bge", bge_emu},
+	{0xff00, 0x0500, "blt", blt_emu},
+	{0xff00, 0x0600, "bgt", bgt_emu},
+	{0xff00, 0x0700, "ble", ble_emu},
+	{0xff00, 0x8200, "bhi", bhi_emu},
+	{0xff00, 0x8300, "blos", blos_emu},
+	{0xff00, 0x8600, "bhis", bhis_emu},
+	{0xff00, 0x8700, "blo", blo_emu},
+	{0x7FC0, 0x0040, "jmp", jmp_emu},
+
 	{0x0, 0x0, NULL, NULL}
 };
 
 
-// rol 0000110001000000   
-//mask 0111111111000000
+//br   0000000100000000    
+//mask 1111111100000000

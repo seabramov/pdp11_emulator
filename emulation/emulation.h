@@ -22,5 +22,29 @@ exec_status_t tst_emu(vcpu_t* vcpu, struct instr_desc *instr, instr_t op);
 exec_status_t asr_emu(vcpu_t* vcpu, struct instr_desc *instr, instr_t op);
 exec_status_t asl_emu(vcpu_t* vcpu, struct instr_desc *instr, instr_t op);
 exec_status_t ror_emu(vcpu_t* vcpu, struct instr_desc *instr, instr_t op);
+exec_status_t rol_emu(vcpu_t* vcpu, struct instr_desc *instr, instr_t op);
+exec_status_t swab_emu(vcpu_t* vcpu, struct instr_desc *instr, instr_t op);
+
+
+/* branches */
+
+exec_status_t br_emu(vcpu_t* vcpu, struct instr_desc *instr, instr_t op);
+exec_status_t bne_emu(vcpu_t* vcpu, struct instr_desc *instr, instr_t op);
+exec_status_t beq_emu(vcpu_t* vcpu, struct instr_desc *instr, instr_t op);
+exec_status_t bpl_emu(vcpu_t* vcpu, struct instr_desc *instr, instr_t op);
+exec_status_t bmi_emu(vcpu_t* vcpu, struct instr_desc *instr, instr_t op);
+exec_status_t bvc_emu(vcpu_t* vcpu, struct instr_desc *instr, instr_t op);
+exec_status_t bvs_emu(vcpu_t* vcpu, struct instr_desc *instr, instr_t op);
+exec_status_t bcc_emu(vcpu_t* vcpu, struct instr_desc *instr, instr_t op);
+exec_status_t bcs_emu(vcpu_t* vcpu, struct instr_desc *instr, instr_t op);
+exec_status_t bge_emu(vcpu_t* vcpu, struct instr_desc *instr, instr_t op);
+exec_status_t blt_emu(vcpu_t* vcpu, struct instr_desc *instr, instr_t op);
+exec_status_t bgt_emu(vcpu_t* vcpu, struct instr_desc *instr, instr_t op);
+exec_status_t ble_emu(vcpu_t* vcpu, struct instr_desc *instr, instr_t op);
+exec_status_t bhi_emu(vcpu_t* vcpu, struct instr_desc *instr, instr_t op);
+exec_status_t blos_emu(vcpu_t* vcpu, struct instr_desc *instr, instr_t op);
+exec_status_t bhis_emu(vcpu_t* vcpu, struct instr_desc *instr, instr_t op);
+exec_status_t blo_emu(vcpu_t* vcpu, struct instr_desc *instr, instr_t op);
+exec_status_t jmp_emu(vcpu_t* vcpu, struct instr_desc *instr, instr_t op);
 
 #endif //EMULATION_H
